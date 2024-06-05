@@ -13,6 +13,6 @@ resource "aws_instance" "mmtf1" {
   instance_type = "t2.large"
   
   tags {
-    Name = "terraform-example"
+    Name = var.instance_name
   }
 }
