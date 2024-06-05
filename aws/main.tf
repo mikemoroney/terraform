@@ -3,6 +3,10 @@ provider "aws" {
   region = "us-east-1"
 }
 
+variable "instance_name" {
+  default = "mmawstf"
+} 
+
 # Create an EC2 instance
 resource "aws_instance" "mmtf1" {
   ami           = "ami-0d1376ce0abc23950"
