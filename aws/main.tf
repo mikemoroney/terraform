@@ -19,6 +19,10 @@ resource "aws_instance" "orpheus_ubuntu_micro" {
   key_name = var.public_ssh_key_name
   subnet_id = "mm_subnet_01"
   tags {
-    Name = var.instance_name
+    "Name" = var.instance_name
   }
+}
+
+output "ip_address" { 
+  value = aws_instance.orpheus_ubuntu_micro.private_ip 
 }
