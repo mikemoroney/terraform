@@ -13,7 +13,7 @@ variable "public_ssh_key_name" {
 }
 
 # Create an EC2 instance
-resource "aws_instance" "orpheus_ubuntu_micro" {
+resource "aws_instance" "mm_orpheus_ubuntu_micro" {
   ami           = "ami-0b5e44cb401c67ac3"
   instance_type = "t2.small"
   key_name = var.public_ssh_key_name
