@@ -9,8 +9,7 @@ variable "name" {
 }
 
 variable "provision" { 
-  type = boolean
-  default = "false"
+  type = bool
 }
 
 variable "docker_ports" {
@@ -26,6 +25,11 @@ variable "docker_ports" {
       protocol = "tcp"
     }
   ]
+}
+
+variable "myInteger" { 
+  type = number
+  default = 1234
 }
 
 resource "null_resource" "null_resource_simple" {
