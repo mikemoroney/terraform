@@ -14,7 +14,7 @@ variable "instance_type" {
 }
 
 # Create an EC2 instance
-resource "aws_instance" "mm_orpheus_ubuntu_micro" {
+resource "aws_instance" "mm_instance" {
   ami           = "ami-0b5e44cb401c67ac3"
   instance_type = var.instance_type
   key_name = "mmkeypair"
@@ -25,9 +25,9 @@ resource "aws_instance" "mm_orpheus_ubuntu_micro" {
 }
 
 output "ip_address" { 
-  value = aws_instance.mm_orpheus_ubuntu_micro.private_ip 
+  value = aws_instance.mm_instance.private_ip 
 }
 
 output "instance_id" { 
-  value = aws_instance.mm_orpheus_ubuntu_micro.id
+  value = aws_instance.mm_instance.id
 }
